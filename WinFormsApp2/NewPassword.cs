@@ -4,7 +4,7 @@
 
     public string GenerateCode()
     {
-        return random.Next(1000, 9999).ToString(); 
+        return random.Next(100000, 999999).ToString(); 
     }
 
     public void NewCode(string code, string phoneNumber)

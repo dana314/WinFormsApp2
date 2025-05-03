@@ -74,11 +74,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(230, 239);
+            label3.Location = new Point(280, 246);
             label3.Name = "label3";
-            label3.Size = new Size(158, 20);
+            label3.Size = new Size(108, 20);
             label3.TabIndex = 5;
-            label3.Text = "Ваш номер телефона";
+            label3.Text = "Введите почту";
             label3.Click += label3_Click;
             // 
             // label4

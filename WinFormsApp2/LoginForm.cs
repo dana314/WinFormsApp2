@@ -1,4 +1,3 @@
-
 namespace WinFormsApp2
 {
     public partial class LoginForm : Form
