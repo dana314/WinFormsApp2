@@ -56,27 +56,32 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(338, 199);
+            label1.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(310, 191);
             label1.Name = "label1";
-            label1.Size = new Size(127, 20);
+            label1.Size = new Size(183, 28);
             label1.TabIndex = 3;
             label1.Text = "Восстановление ";
+            label1.Click += label1_Click_1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(369, 219);
+            label2.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.Location = new Point(351, 218);
             label2.Name = "label2";
-            label2.Size = new Size(60, 20);
+            label2.Size = new Size(85, 28);
             label2.TabIndex = 4;
             label2.Text = "пароля";
+            label2.Click += label2_Click_1;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label3.Location = new Point(280, 246);
             label3.Name = "label3";
-            label3.Size = new Size(108, 20);
+            label3.Size = new Size(123, 22);
             label3.TabIndex = 5;
             label3.Text = "Введите почту";
             label3.Click += label3_Click;
@@ -84,9 +89,10 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label4.Location = new Point(295, 316);
             label4.Name = "label4";
-            label4.Size = new Size(93, 20);
+            label4.Size = new Size(108, 22);
             label4.TabIndex = 6;
             label4.Text = "Введите код";
             label4.Click += label4_Click;
@@ -110,7 +116,8 @@
             // sendCodeBTN
             // 
             sendCodeBTN.FlatStyle = FlatStyle.Popup;
-            sendCodeBTN.Location = new Point(326, 275);
+            sendCodeBTN.Font = new Font("Impact", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            sendCodeBTN.Location = new Point(338, 275);
             sendCodeBTN.Name = "sendCodeBTN";
             sendCodeBTN.Size = new Size(127, 29);
             sendCodeBTN.TabIndex = 9;
@@ -121,9 +128,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label5.Location = new Point(245, 352);
             label5.Name = "label5";
-            label5.Size = new Size(143, 20);
+            label5.Size = new Size(157, 22);
             label5.TabIndex = 10;
             label5.Text = "Ваш новый пароль";
             label5.Click += label5_Click;
@@ -139,6 +147,7 @@
             // verificationBTN
             // 
             verificationBTN.FlatStyle = FlatStyle.Popup;
+            verificationBTN.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             verificationBTN.Location = new Point(338, 416);
             verificationBTN.Name = "verificationBTN";
             verificationBTN.Size = new Size(127, 29);
@@ -150,9 +159,10 @@
             // repeatPassword
             // 
             repeatPassword.AutoSize = true;
+            repeatPassword.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             repeatPassword.Location = new Point(249, 383);
             repeatPassword.Name = "repeatPassword";
-            repeatPassword.Size = new Size(139, 20);
+            repeatPassword.Size = new Size(150, 22);
             repeatPassword.TabIndex = 13;
             repeatPassword.Text = "Повторите пароль";
             // 

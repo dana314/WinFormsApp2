@@ -16,5 +16,30 @@ namespace WinFormsApp2
         {
             InitializeComponent();
         }
+
+        public void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        public void button2_Click(object sender, EventArgs e)
+        {
+            panelFilms.Visible = false;
+            panelSerials.Visible = true;
+            button2.Enabled = false;
+            button1.Enabled = true;
+        }
+
+        public void button1_Click_1(object sender, EventArgs e)
+        {
+            panelFilms.Visible = true;
+            panelSerials.Visible = false;
+            button2.Enabled = true;
+            button1.Enabled = false;
+        }
     }
 }

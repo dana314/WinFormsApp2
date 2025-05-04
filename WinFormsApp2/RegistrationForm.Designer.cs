@@ -57,10 +57,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(341, 186);
+            label1.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(320, 182);
             label1.Name = "label1";
-            label1.Size = new Size(113, 25);
+            label1.Size = new Size(169, 35);
             label1.TabIndex = 2;
             label1.Text = "Регистрация";
             // 
@@ -68,9 +68,10 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = SystemColors.Window;
-            label2.Location = new Point(243, 217);
+            label2.Font = new Font("Impact", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.Location = new Point(231, 220);
             label2.Name = "label2";
-            label2.Size = new Size(139, 20);
+            label2.Size = new Size(151, 21);
             label2.TabIndex = 3;
             label2.Text = "Имя пользователя";
             // 
@@ -78,9 +79,10 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = SystemColors.Window;
-            label3.Location = new Point(331, 254);
+            label3.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label3.Location = new Point(327, 252);
             label3.Name = "label3";
-            label3.Size = new Size(51, 20);
+            label3.Size = new Size(55, 22);
             label3.TabIndex = 4;
             label3.Text = "Почта";
             // 
@@ -88,9 +90,10 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Window;
-            label4.Location = new Point(258, 283);
+            label4.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label4.Location = new Point(246, 281);
             label4.Name = "label4";
-            label4.Size = new Size(124, 20);
+            label4.Size = new Size(140, 22);
             label4.TabIndex = 5;
             label4.Text = "Логин (телефон)";
             // 
@@ -98,9 +101,10 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = SystemColors.Window;
+            label5.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label5.Location = new Point(320, 316);
             label5.Name = "label5";
-            label5.Size = new Size(62, 20);
+            label5.Size = new Size(66, 22);
             label5.TabIndex = 6;
             label5.Text = "Пароль";
             // 
@@ -108,18 +112,20 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = SystemColors.Window;
-            label6.Location = new Point(266, 351);
+            label6.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label6.Location = new Point(251, 349);
             label6.Name = "label6";
-            label6.Size = new Size(116, 20);
+            label6.Size = new Size(131, 22);
             label6.TabIndex = 7;
             label6.Text = "Дата рождения";
             // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(320, 379);
+            button1.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button1.Location = new Point(311, 379);
             button1.Name = "button1";
-            button1.Size = new Size(172, 29);
+            button1.Size = new Size(192, 29);
             button1.TabIndex = 8;
             button1.Text = "Зарегистрироваться";
             button1.UseVisualStyleBackColor = true;
@@ -170,7 +176,8 @@
             // cancelBTN
             // 
             cancelBTN.FlatStyle = FlatStyle.Popup;
-            cancelBTN.Location = new Point(371, 414);
+            cancelBTN.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            cancelBTN.Location = new Point(372, 414);
             cancelBTN.Name = "cancelBTN";
             cancelBTN.Size = new Size(83, 29);
             cancelBTN.TabIndex = 14;
@@ -183,7 +190,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Фон_регистрация;
-            ClientSize = new Size(800, 657);
+            ClientSize = new Size(733, 745);
             Controls.Add(cancelBTN);
             Controls.Add(dateTimePicker1);
             Controls.Add(textBox4);

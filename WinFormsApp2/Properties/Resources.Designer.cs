@@ -71,6 +71,46 @@ namespace WinFormsApp2.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] Психбольница {
+            get {
+                object obj = ResourceManager.GetObject("Психбольница", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] ТупойИЕщеТупее {
+            get {
+                object obj = ResourceManager.GetObject("ТупойИЕщеТупее", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] ТупойИЕщеТупее__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ТупойИЕщеТупее (1)", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] ТупойИЕщеТупее__2_ {
+            get {
+                object obj = ResourceManager.GetObject("ТупойИЕщеТупее (2)", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Фон_авторизация {
