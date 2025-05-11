@@ -188,7 +188,7 @@
         private Button loginBTN;
         private Button newPassBTN;
         private Button registrationBTN;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        public TextBox textBox1;
+        public TextBox textBox2;
     }
 }

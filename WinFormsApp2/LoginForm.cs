@@ -2,23 +2,24 @@ namespace WinFormsApp2
 {
     public partial class LoginForm : Form
     {
+        public Action<string> MessageBoxShow { get; set; } = (text) => MessageBox.Show(text);
         public LoginForm()
         {
             InitializeComponent();
 
-            
+
             textBox2.PasswordChar = 'Х';
-            this.AcceptButton = loginBTN; 
+            this.AcceptButton = loginBTN;
         }
 
-        private void loginBTN_Click(object sender, EventArgs e)
+        public void loginBTN_Click(object sender, EventArgs e)
         {
             string login = textBox1.Text.Trim();
             string password = textBox2.Text;
 
             if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("¬ведите номер и пароль");
+                MessageBoxShow("¬ведите номер и пароль");
                 return;
             }
 
@@ -35,13 +36,13 @@ namespace WinFormsApp2
                     }
                     else
                     {
-                        MessageBox.Show("ѕароль неверный");
+                        MessageBoxShow("ѕароль неверный");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"ќшибка: {ex.Message}");
+                MessageBoxShow($"ќшибка: {ex.Message}");
             }
         }
 
