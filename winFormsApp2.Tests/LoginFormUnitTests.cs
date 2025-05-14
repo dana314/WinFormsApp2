@@ -49,6 +49,6 @@ namespace winFormsApp2.Tests
             form.loginBTN_Click(null, EventArgs.Empty);
             Assert.True(messageBoxShown, "Введите номер и пароль");
         }
-
     }
 }
+

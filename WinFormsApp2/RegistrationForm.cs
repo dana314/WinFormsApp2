@@ -3,11 +3,12 @@ namespace WinFormsApp2
 {
     public partial class RegistrationForm : Form
     {
+        public Action<string> MessageBoxShow { get; set; } = (text) => MessageBox.Show(text);
         public RegistrationForm()
         {
             InitializeComponent();
             textBox4.PasswordChar = '*';
-            dateTimePicker1.MaxDate = DateTime.Now; 
+            dateTimePicker1.MaxDate = DateTime.Now;
         }
         public void registrationBTN_Click(object sender, EventArgs e)
         {
@@ -15,7 +16,7 @@ namespace WinFormsApp2
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
                 Logger.Log("Не введено имя пользователя");
-                MessageBox.Show("Введите имя пользователя");
+                MessageBoxShow("Введите имя пользователя");
                 textBox1.Focus();
                 return;
             }
@@ -23,7 +24,7 @@ namespace WinFormsApp2
             if (!textBox2.Text.Contains("@") || !textBox2.Text.Contains(".") || textBox2.Text.Length < 5)
             {
                 Logger.Log("Неверный формат email");
-                MessageBox.Show("Введите email");
+                MessageBoxShow("Введите email");
                 textBox2.Focus();
                 return;
             }
@@ -31,7 +32,7 @@ namespace WinFormsApp2
             if (!Regex.IsMatch(textBox3.Text, @"^\+[0-9]{11,20}$"))
             {
                 Logger.Log("Неверный формат номера телефона");
-                MessageBox.Show("Введите номер телефона в виде: +XXXXXXXXXXX");
+                MessageBoxShow("Введите номер телефона в виде: +XXXXXXXXXXX");
                 textBox3.Focus();
                 return;
             }
@@ -39,7 +40,7 @@ namespace WinFormsApp2
             if (dateTimePicker1.Value > DateTime.Now)
             {
                 Logger.Log("Дата рождения позднее текущей даты");
-                MessageBox.Show("Дата рождения не может быть задана в будущем");
+                MessageBoxShow("Дата рождения не может быть задана в будущем");
                 dateTimePicker1.Focus();
                 return;
             }
@@ -91,5 +92,10 @@ namespace WinFormsApp2
         public void textBox3_TextChanged(object sender, EventArgs e) { }
         public void textBox4_TextChanged(object sender, EventArgs e) { }
         public void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,5 +54,10 @@ namespace WinFormsApp2
         {
             new NewPasswordForm().Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
