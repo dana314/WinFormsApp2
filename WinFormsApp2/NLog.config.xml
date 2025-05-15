@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      autoReload="true"
+      internalLogLevel="Warn"
+      internalLogFile="c:\logs\internal-nlog.txt">
+
+	
+	<targets>
+		<!-- Логирование в файл -->
+		<target xsi:type="File"
+				name="logfile"
+				fileName="c:\Logs\app-log.txt"
+				layout="${longdate} | ${level:uppercase=true} | ${message} ${exception}" />
+
+		<!-- Логирование в консоль -->
+		<target xsi:type="Console"
+				name="console"
+				layout="${level:uppercase=true}: ${message} ${exception}" />
+	</targets>
+
+	
+	<rules>
+		<!-- Все сообщения уровня Info и выше пишутся в файл и консоль -->
+		<logger name="*" minlevel="Info" writeTo="logfile,console" />
+	</rules>
+</nlog>

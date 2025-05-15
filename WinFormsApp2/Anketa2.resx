@@ -117,28 +117,82 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label2" xml:space="preserve">
-    <value>Логин(телефон)</value>
+  <data name="comboBox1" xml:space="preserve">
+    <value>Комедия</value>
   </data>
-  <data name="label3" xml:space="preserve">
-    <value>Пароль</value>
+  <data name="comboBox1.2" xml:space="preserve">
+    <value>Мелодрама</value>
   </data>
-  <data name="label4" xml:space="preserve">
-    <value>Забыли пароль?</value>
+  <data name="comboBox1.3" xml:space="preserve">
+    <value>Ужасы</value>
   </data>
-  <data name="label5" xml:space="preserve">
-    <value>Нет аккаунта?</value>
+  <data name="comboBox1.4" xml:space="preserve">
+    <value>Триллер</value>
   </data>
-  <data name="loginBTN" xml:space="preserve">
-    <value>Войти</value>
+  <data name="comboBox1.5" xml:space="preserve">
+    <value>Детектив</value>
+  </data>
+  <data name="comboBox1.6" xml:space="preserve">
+    <value>Фантастика</value>
+  </data>
+  <data name="comboBox1.7" xml:space="preserve">
+    <value>Боевик</value>
+  </data>
+  <data name="comboBox1.8" xml:space="preserve">
+    <value>Мультфильм</value>
+  </data>
+  <data name="comboBox2" xml:space="preserve">
+    <value>США</value>
+  </data>
+  <data name="comboBox2.10" xml:space="preserve">
+    <value>Япония</value>
+  </data>
+  <data name="comboBox2.11" xml:space="preserve">
+    <value>Южная Корея</value>
+  </data>
+  <data name="comboBox2.12" xml:space="preserve">
+    <value>Китай</value>
+  </data>
+  <data name="comboBox2.13" xml:space="preserve">
+    <value>Индия</value>
+  </data>
+  <data name="comboBox2.14" xml:space="preserve">
+    <value>Россия</value>
+  </data>
+  <data name="comboBox2.2" xml:space="preserve">
+    <value>Великобритания</value>
+  </data>
+  <data name="comboBox2.3" xml:space="preserve">
+    <value>Канада</value>
+  </data>
+  <data name="comboBox2.4" xml:space="preserve">
+    <value>Франция</value>
+  </data>
+  <data name="comboBox2.5" xml:space="preserve">
+    <value>Германия</value>
+  </data>
+  <data name="comboBox2.6" xml:space="preserve">
+    <value>Италия</value>
+  </data>
+  <data name="comboBox2.7" xml:space="preserve">
+    <value>Испания</value>
+  </data>
+  <data name="comboBox2.8" xml:space="preserve">
+    <value>Австралия</value>
+  </data>
+  <data name="comboBox2.9" xml:space="preserve">
+    <value>Новая Зеландия</value>
   </data>
   <data name="MessageBox" xml:space="preserve">
-    <value>Введите логин и пароль</value>
+    <value>Выберите жанр</value>
   </data>
-  <data name="newPassBTN" xml:space="preserve">
-    <value>Востановить</value>
+  <data name="MessageBox2" xml:space="preserve">
+    <value>Выберите страну</value>
   </data>
-  <data name="registrationBTN" xml:space="preserve">
-    <value>Регистрация</value>
+  <data name="MessageBox3" xml:space="preserve">
+    <value>Выберите десятилетие</value>
+  </data>
+  <data name="MessageBox4" xml:space="preserve">
+    <value>Выберите возрастной рейтинг</value>
   </data>
 </root>

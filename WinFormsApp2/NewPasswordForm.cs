@@ -1,54 +1,75 @@
 ﻿using System.Net;
 using System.Net.Mail;
-using Dapper;
-using Npgsql;
 using System.Text.RegularExpressions;
-using System.Data.SqlClient;
+using NLog;
+using Microsoft.EntityFrameworkCore;
 namespace WinFormsApp2
 {
+    /// <summary>
+    /// Форма восстановления пароля 
+    /// </summary>
     public partial class NewPasswordForm : Form
     {
+        //  SMTP-сервер
         private const string SmtpHost = "smtp.yandex.ru";
-        private const int SmtpPort = 465;
+        private const int SmtpPort = 587;
         private const string SmtpUsername = "dana.khal@yandex.ru";
         private const string SmtpPassword = "ixcgnrwyfwmeljlo";
         private const string FromEmail = "dana.khal@yandex.ru";
         private const string FromName = "КиноПлюс";
 
-        public string sentCode;
-        public string userEmail;
+        /// <summary>
+        /// Код подтверждения
+        /// </summary>
+        public string SentCode { get; set; }
+
+        /// <summary>
+        /// Email для восстановления пароля
+        /// </summary>
+        public string UserEmail { get; set; }
+
+        /// <summary>
+        /// Строка подключения к PostgreSQL
+        /// </summary>
         public const string ConnectionString = "Server=localhost;Database=Userr;User Id=postgres;Password=2502;";
 
+        /// <summary>
+        /// Инициализирует новый экземпляр формы восстановления пароля
+        /// </summary>
         public NewPasswordForm()
         {
             InitializeComponent();
         }
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
-        public async void sendCodeBTN_Click(object sender, EventArgs e)
+        private async void sendCodeBTN_Click(object sender, EventArgs e)
         {
-            userEmail = textBox1.Text.Trim();
-            Logger.Log($"Всстановление пароля для: {userEmail}");
+            var userEmail = textBox1.Text.Trim();
+            UserEmail = userEmail;
+            Logger.Info($"Восстановление пароля для: {UserEmail}");
 
-            if (!IsValidEmail(userEmail))
+            // Валидация email
+            if (!IsValidEmail(UserEmail))
             {
-                Logger.Log("Ошибка: Неверный формат email");
+                Logger.Error("Ошибка: Неверный формат email");
                 MessageBox.Show("Введите корректный email");
                 return;
             }
 
-            if (!await UserExists(userEmail))
+            if (!UserExists(UserEmail))
             {
-                Logger.Log($"Ошибка: Пользователь не найден");
-                MessageBox.Show($"Пользователь {userEmail} не найден");
+                Logger.Error($"Ошибка: пользователь не найден");
+                MessageBox.Show($"Пользователь {UserEmail} не найден");
                 return;
             }
-            sentCode = new Random().Next(100000, 999999).ToString();
-            Logger.Log($"Код подтверждения: {sentCode}");
+
+            SentCode = new Random().Next(100000, 999999).ToString();
+            Logger.Info($"Код подтверждения: {SentCode}");
             try
             {
-                await SendEmailViaYandexSMTP(userEmail, sentCode);
-                Logger.Log($"Код отправлен на {userEmail}");
-                MessageBox.Show($"Код подтверждения отправлен на {userEmail}");
+                await SendEmailViaYandexSMTP(UserEmail, SentCode);
+                Logger.Info($"Код отправлен на {UserEmail}");
+                MessageBox.Show($"Код подтверждения отправлен на {UserEmail}");
 
                 textBox2.Enabled = true;
                 textBox3.Enabled = true;
@@ -58,12 +79,12 @@ namespace WinFormsApp2
             }
             catch (Exception ex)
             {
-                Logger.LogError("Ошибка отправки email", ex);
+                Logger.Error("Ошибка отправки email", ex);
                 MessageBox.Show($"Ошибка: {ex.Message}");
             }
         }
 
-        public async Task SendEmailViaYandexSMTP(string email, string code)
+        private async Task SendEmailViaYandexSMTP(string email, string code)
         {
             using (var smtpClient = new SmtpClient(SmtpHost, SmtpPort))
             {
@@ -87,33 +108,31 @@ namespace WinFormsApp2
             }
         }
 
-        public async Task<bool> UserExists(string email)
+        private bool UserExists(string email)
         {
             try
             {
-                using (var connection = new NpgsqlConnection(ConnectionString))
-                {
-                    string query = @"SELECT COUNT(1) > 0 
-                            FROM ""Users"" 
-                            WHERE LOWER(TRIM(""Email"")) = LOWER(TRIM(@Email))";
+                var normalizedEmail = email.Trim().ToLower();
 
-                    return await connection.ExecuteScalarAsync<bool>(query, new { Email = email });
+                using (var db = new AppDbContext())
+                {
+                    return db.Users.Any(u => u.Email.Trim().ToLower() == normalizedEmail);
                 }
             }
             catch (Exception ex)
             {
-                Logger.LogError("Ошибка проверки", ex);
+                Logger.Error(ex, "Ошибка проверки пользователя по email");
                 throw;
             }
         }
 
-        public async void verificationBTN_Click(object sender, EventArgs e)
+        private async void verificationBTN_Click(object sender, EventArgs e)
         {
-            Logger.Log("Попытка верификации кода");
+            Logger.Info("Попытка верификации кода");
 
-            if (textBox2.Text != sentCode)
+            if (textBox2.Text != SentCode)
             {
-                Logger.Log("Неверный код");
+                Logger.Error("Неверный код");
                 MessageBox.Show("Неверный код");
                 textBox2.Focus();
                 return;
@@ -121,7 +140,7 @@ namespace WinFormsApp2
 
             if (textBox3.Text != textBox4.Text)
             {
-                Logger.Log("Пароли не совпадают");
+                Logger.Error("Пароли не совпадают");
                 MessageBox.Show("Пароли не совпадают");
                 textBox3.Focus();
                 return;
@@ -129,118 +148,101 @@ namespace WinFormsApp2
 
             if (!IsPasswordValid(textBox3.Text))
             {
-                Logger.Log("Некорректный формат пароля");
-                MessageBox.Show("Пароль должен содержать минимум 6 символов");
+                Logger.Error("Некорректный формат пароля");
+                MessageBox.Show("Пароль должен содержать минимум 6 символов, включая буквы");
                 textBox3.Focus();
                 return;
             }
 
             try
             {
-                bool success = await UpdatePassword(userEmail, textBox3.Text);
+                var success = await UpdatePassword(UserEmail, textBox3.Text);
                 if (success)
                 {
-                    Logger.Log("Пароль изменен");
-                    MessageBox.Show("Пароль изменен");
+                    Logger.Error("Пароль изменён");
+                    MessageBox.Show("Пароль изменён");
                     this.Close();
                 }
                 else
                 {
-                    Logger.Log("Не удалось изменить пароль");
+                    Logger.Error("Не удалось изменить пароль");
                     MessageBox.Show("Не удалось изменить пароль");
                 }
             }
             catch (Exception ex)
             {
-                Logger.LogError("Ошибка:", ex);
+                Logger.Error("Ошибка:", ex);
                 MessageBox.Show($"Ошибка: {ex.Message}");
             }
         }
 
-        public async Task<bool> UpdatePassword(string email, string newPassword)
+        private async Task<bool> UpdatePassword(string email, string newPassword)
         {
             try
             {
-                string hashedPassword = HashPassword(newPassword);
-                Logger.Log("Пароль хэширован");
+                var hashedPassword = HashPassword(newPassword);
+                Logger.Info("Пароль хэширован");
 
-                using (var connection = new SqlConnection(ConnectionString))
+                using (var context = new AppDbContext())
                 {
-                    await connection.OpenAsync();
-                    string query = "UPDATE Users SET PasswordHash = @PasswordHash WHERE Email = @Email";
+                    var user = await context.Users.FirstOrDefaultAsync(u => u.Email == email);
 
-                    using (var command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Email", email);
-                        command.Parameters.AddWithValue("@PasswordHash", hashedPassword);
-                        int affectedRows = await command.ExecuteNonQueryAsync();
-                        return affectedRows > 0;
-                    }
+                    if (user == null)
+                        return false;
+
+                    user.Password = hashedPassword;
+                    context.Users.Update(user);
+                    var affectedRows = await context.SaveChangesAsync();
+                    return affectedRows > 0;
                 }
             }
             catch (Exception ex)
             {
-                Logger.LogError("Ошибка обновления пароля", ex);
+                Logger.Error("Ошибка обновления пароля", ex);
                 throw;
             }
         }
 
-        public string HashPassword(string password)
+        private string HashPassword(string password)
         {
             try
             {
                 var hash = Convert.ToBase64String(System.Security.Cryptography.SHA256.Create()
                     .ComputeHash(System.Text.Encoding.UTF8.GetBytes(password)));
-                Logger.Log("Хэширование выполнено");
+                Logger.Info("Хэширование выполнено");
                 return hash;
             }
             catch (Exception ex)
             {
-                Logger.LogError("Ошибка:", ex);
+                Logger.Error("Ошибка:", ex);
                 throw;
             }
         }
 
-        public bool IsValidEmail(string email)
+        private bool IsValidEmail(string email)
         {
             try
             {
                 var addr = new MailAddress(email);
-                bool isValid = addr.Address == email;
-                Logger.Log($"Проверка email {email}: {(isValid ? "подходит" : "не подходит")}");
+                var isValid = addr.Address == email;
+                Logger.Info($"Проверка email {email}: {(isValid ? "подходит" : "не подходит")}");
                 return isValid;
             }
             catch
             {
-                Logger.Log($"Email {email} не подходит");
+                Logger.Error($"Email {email} не подходит");
                 return false;
             }
         }
 
-        public bool IsPasswordValid(string password)
+        private bool IsPasswordValid(string password)
         {
-            bool isValid = password.Length >= 6 &&
+            var isValid = password.Length >= 6 &&
                           Regex.IsMatch(password, @"\d") &&
                           Regex.IsMatch(password, @"[a-zA-Z]");
 
-            Logger.Log($"Проверка пароля: {(isValid ? "соответствует требованиям" : "не соответствует")}");
+            Logger.Info($"Проверка пароля: {(isValid ? "соответствует требованиям" : "не соответствует")}");
             return isValid;
         }
-        public void textBox1_TextChanged(object sender, EventArgs e) { }
-
-        public void textBox2_TextChanged(object sender, EventArgs e) { }
-
-        public void textBox3_TextChanged(object sender, EventArgs e) {}
-
-        public void textBox4_TextChanged(object sender, EventArgs e) { }
-
-        public void label1_Click(object sender, EventArgs e) { }
-        public void label2_Click(object sender, EventArgs e) { }
-        public void label3_Click(object sender, EventArgs e) { }
-        public void label4_Click(object sender, EventArgs e) { }
-        public void label5_Click(object sender, EventArgs e) { }
-
-        public void label1_Click_1(object sender, EventArgs e) { }
-        public void label2_Click_1(object sender, EventArgs e) { }
     }
 }

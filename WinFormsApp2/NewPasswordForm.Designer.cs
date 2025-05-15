@@ -56,46 +56,46 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.Window;
             label1.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label1.Location = new Point(310, 191);
             label1.Name = "label1";
             label1.Size = new Size(183, 28);
             label1.TabIndex = 3;
             label1.Text = "Восстановление ";
-            label1.Click += label1_Click_1;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.Window;
             label2.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label2.Location = new Point(351, 218);
             label2.Name = "label2";
             label2.Size = new Size(85, 28);
             label2.TabIndex = 4;
             label2.Text = "пароля";
-            label2.Click += label2_Click_1;
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.Window;
             label3.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label3.Location = new Point(280, 246);
             label3.Name = "label3";
             label3.Size = new Size(123, 22);
             label3.TabIndex = 5;
             label3.Text = "Введите почту";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = SystemColors.Window;
             label4.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label4.Location = new Point(295, 316);
             label4.Name = "label4";
             label4.Size = new Size(108, 22);
             label4.TabIndex = 6;
             label4.Text = "Введите код";
-            label4.Click += label4_Click;
             // 
             // textBox1
             // 
@@ -103,7 +103,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 7;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -111,7 +110,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 8;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // sendCodeBTN
             // 
@@ -128,13 +126,13 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = SystemColors.Window;
             label5.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label5.Location = new Point(245, 352);
             label5.Name = "label5";
             label5.Size = new Size(157, 22);
             label5.TabIndex = 10;
             label5.Text = "Ваш новый пароль";
-            label5.Click += label5_Click;
             // 
             // textBox3
             // 
@@ -142,7 +140,6 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(125, 27);
             textBox3.TabIndex = 11;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // verificationBTN
             // 
@@ -159,6 +156,7 @@
             // repeatPassword
             // 
             repeatPassword.AutoSize = true;
+            repeatPassword.BackColor = SystemColors.Window;
             repeatPassword.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             repeatPassword.Location = new Point(249, 383);
             repeatPassword.Name = "repeatPassword";
@@ -193,7 +191,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "NewPasswordForm";
-            Text = "Form1";
+            Text = "Восстановление пароля";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -81,6 +81,16 @@ namespace WinFormsApp2.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2025_04_27_211123__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2025-04-27 211123 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
         internal static byte[] ТупойИЕщеТупее {

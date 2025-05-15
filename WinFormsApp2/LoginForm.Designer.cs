@@ -171,7 +171,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "LoginForm";
-            Text = "Form1";
+            Text = "Вход";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

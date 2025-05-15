@@ -57,10 +57,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(320, 182);
+            label1.BackColor = SystemColors.Window;
+            label1.FlatStyle = FlatStyle.Popup;
+            label1.Font = new Font("Impact", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(327, 182);
             label1.Name = "label1";
-            label1.Size = new Size(169, 35);
+            label1.Size = new Size(140, 28);
             label1.TabIndex = 2;
             label1.Text = "Регистрация";
             // 
@@ -123,9 +125,9 @@
             // 
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(311, 379);
+            button1.Location = new Point(320, 379);
             button1.Name = "button1";
-            button1.Size = new Size(192, 29);
+            button1.Size = new Size(186, 29);
             button1.TabIndex = 8;
             button1.Text = "Зарегистрироваться";
             button1.UseVisualStyleBackColor = true;
@@ -190,7 +192,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Фон_регистрация;
-            ClientSize = new Size(733, 745);
+            ClientSize = new Size(732, 745);
             Controls.Add(cancelBTN);
             Controls.Add(dateTimePicker1);
             Controls.Add(textBox4);
@@ -206,7 +208,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "RegistrationForm";
-            Text = "Form1";
+            Text = "Регистрация";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
