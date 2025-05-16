@@ -160,6 +160,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 9;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -206,7 +207,7 @@
         private Button loginBTN;
         private Button newPassBTN;
         private Button registrationBTN;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        public TextBox textBox1;
+        public TextBox textBox2;
     }
 }

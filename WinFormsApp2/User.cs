@@ -17,7 +17,7 @@ namespace WinFormsApp2
         /// </summary>
         [Required(ErrorMessage = "Номер телефона обязателен")]
         [StringLength(20)]
-        [RegularExpression(@"+[0-9]{11,20}$", ErrorMessage = "Введите номер телефона (можно с +)")]
+        [RegularExpression(@"^\+[0-9]{11,20}$", ErrorMessage = "Введите номер телефона (можно с +)")]
         public string Login { get; set; }
 
         /// <summary>
