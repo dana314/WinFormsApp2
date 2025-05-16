@@ -206,7 +206,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackgroundImage = Properties.Resources.Фон_регистрация;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(732, 745);
             Controls.Add(cancelBTN);
             Controls.Add(dateTimePicker1);

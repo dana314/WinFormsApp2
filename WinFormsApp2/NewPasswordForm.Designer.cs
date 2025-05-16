@@ -48,7 +48,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImage = Properties.Resources.Авторизация;
-            pictureBox1.Location = new Point(189, 190);
+            pictureBox1.Location = new Point(184, 206);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(423, 293);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -61,7 +61,7 @@
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Window;
             label1.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(310, 191);
+            label1.Location = new Point(310, 206);
             label1.Name = "label1";
             label1.Size = new Size(183, 28);
             label1.TabIndex = 3;
@@ -73,7 +73,7 @@
             label2.AutoSize = true;
             label2.BackColor = SystemColors.Window;
             label2.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label2.Location = new Point(351, 218);
+            label2.Location = new Point(351, 233);
             label2.Name = "label2";
             label2.Size = new Size(85, 28);
             label2.TabIndex = 4;
@@ -85,7 +85,7 @@
             label3.AutoSize = true;
             label3.BackColor = SystemColors.Window;
             label3.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label3.Location = new Point(280, 246);
+            label3.Location = new Point(280, 261);
             label3.Name = "label3";
             label3.Size = new Size(123, 22);
             label3.TabIndex = 5;
@@ -97,7 +97,7 @@
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Window;
             label4.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(295, 316);
+            label4.Location = new Point(295, 331);
             label4.Name = "label4";
             label4.Size = new Size(108, 22);
             label4.TabIndex = 6;
@@ -106,7 +106,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(407, 242);
+            textBox1.Location = new Point(407, 257);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 7;
@@ -115,7 +115,7 @@
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(407, 309);
+            textBox2.Location = new Point(407, 324);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 8;
@@ -125,7 +125,7 @@
             sendCodeBTN.Anchor = AnchorStyles.None;
             sendCodeBTN.FlatStyle = FlatStyle.Popup;
             sendCodeBTN.Font = new Font("Impact", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            sendCodeBTN.Location = new Point(338, 275);
+            sendCodeBTN.Location = new Point(338, 290);
             sendCodeBTN.Name = "sendCodeBTN";
             sendCodeBTN.Size = new Size(127, 29);
             sendCodeBTN.TabIndex = 9;
@@ -139,7 +139,7 @@
             label5.AutoSize = true;
             label5.BackColor = SystemColors.Window;
             label5.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label5.Location = new Point(245, 352);
+            label5.Location = new Point(245, 367);
             label5.Name = "label5";
             label5.Size = new Size(157, 22);
             label5.TabIndex = 10;
@@ -148,7 +148,7 @@
             // textBox3
             // 
             textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(407, 345);
+            textBox3.Location = new Point(407, 360);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(125, 27);
             textBox3.TabIndex = 11;
@@ -158,7 +158,7 @@
             verificationBTN.Anchor = AnchorStyles.None;
             verificationBTN.FlatStyle = FlatStyle.Popup;
             verificationBTN.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            verificationBTN.Location = new Point(338, 416);
+            verificationBTN.Location = new Point(338, 431);
             verificationBTN.Name = "verificationBTN";
             verificationBTN.Size = new Size(127, 29);
             verificationBTN.TabIndex = 12;
@@ -172,7 +172,7 @@
             repeatPassword.AutoSize = true;
             repeatPassword.BackColor = SystemColors.Window;
             repeatPassword.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            repeatPassword.Location = new Point(249, 383);
+            repeatPassword.Location = new Point(249, 398);
             repeatPassword.Name = "repeatPassword";
             repeatPassword.Size = new Size(150, 22);
             repeatPassword.TabIndex = 13;
@@ -181,7 +181,7 @@
             // textBox4
             // 
             textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(407, 380);
+            textBox4.Location = new Point(407, 395);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(125, 27);
             textBox4.TabIndex = 14;
@@ -192,7 +192,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackgroundImage = Properties.Resources.Фон_регистрация;
-            ClientSize = new Size(800, 672);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(800, 703);
             Controls.Add(textBox4);
             Controls.Add(repeatPassword);
             Controls.Add(verificationBTN);
