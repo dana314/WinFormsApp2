@@ -43,8 +43,10 @@ namespace WinFormsApp2
 
         private MainForm _mainForm;
 
+        public Action<string> MessageBoxShow { get; set; } = (text) => MessageBox.Show(text);
+
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-        private void registrationBTN_Click(object sender, EventArgs e)
+        public void registrationBTN_Click(object sender, EventArgs e)
         {
             Logger.Info("Начало регистрации");
 
@@ -52,7 +54,7 @@ namespace WinFormsApp2
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
                 Logger.Error("Не введено имя пользователя");
-                MessageBox.Show("Введите имя пользователя");
+                MessageBoxShow("Введите имя пользователя");
                 textBox1.Focus();
                 return;
             }
@@ -62,7 +64,7 @@ namespace WinFormsApp2
             if (!Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 Logger.Error("Неверный формат email: {0}", email);
-                MessageBox.Show("Введите корректный email");
+                MessageBoxShow("Введите корректный email");
                 textBox2.Focus();
                 return;
             }
@@ -71,7 +73,7 @@ namespace WinFormsApp2
             if (dateTimePicker1.Value > DateTime.Now)
             {
                 Logger.Error("Дата рождения позднее текущей даты");
-                MessageBox.Show("Дата рождения не может быть задана в будущем");
+                MessageBoxShow("Дата рождения не может быть задана в будущем");
                 dateTimePicker1.Focus();
                 return;
             }
@@ -82,7 +84,7 @@ namespace WinFormsApp2
                 {
                     if (db.Users.Any(u => u.Login == textBox3.Text.Trim()))
                     {
-                        MessageBox.Show("Этот телефон уже зарегистрирован");
+                        MessageBoxShow("Этот телефон уже зарегистрирован");
                         return;
                     }
 
@@ -98,7 +100,7 @@ namespace WinFormsApp2
                     db.Users.Add(newUser);
                     db.SaveChanges();
 
-                    MessageBox.Show("Вы успешно зарегистрировались!");
+                    MessageBoxShow("Вы успешно зарегистрировались!");
 
                     var anketaForm = new AnketaForm(newUser.Id);
                     anketaForm.Show();
@@ -108,14 +110,19 @@ namespace WinFormsApp2
             catch (Exception ex)
             {
                 Logger.Error("Ошибка при регистрации", ex);
-                MessageBox.Show($"Ошибка при регистрации: {ex.Message}");
+                MessageBoxShow($"Ошибка при регистрации: {ex.Message}");
             }
         }
 
-        private void cancelBTN_Click(object sender, EventArgs e)
+        public void cancelBTN_Click(object sender, EventArgs e)
         {
             Logger.Info("Регистрация отменена");
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
