@@ -21,9 +21,15 @@ namespace WinFormsApp2
             this.AcceptButton = loginBTN;
         }
 
+        /// <summary>
+        /// Позваляет получить текст в message box
+        /// </summary>
+        //Штука для юнит тестов не трогать
+        public Action<string> MessageBoxShow { get; set; } = (text) => MessageBox.Show(text);
+
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
-        private void loginBTN_Click(object sender, EventArgs e)
+        public void loginBTN_Click(object sender, EventArgs e)
         {
             var login = textBox1.Text.Trim();
             var password = textBox2.Text;
@@ -31,7 +37,7 @@ namespace WinFormsApp2
             // Валидация введенных данных
             if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Введите логин и пароль");
+                MessageBoxShow("Введите логин и пароль");
                 return;
             }
 
@@ -52,14 +58,14 @@ namespace WinFormsApp2
                     }
                     else
                     {
-                        MessageBox.Show("Неверный логин или пароль");
+                        MessageBoxShow("Неверный логин или пароль");
                     }
                 }
             }
             catch (Exception ex)
             {
                 Logger.Error("Ошибка:", ex);
-                MessageBox.Show($"Ошибка: {ex.Message}");
+                MessageBoxShow($"Ошибка: {ex.Message}");
             }
         }
 

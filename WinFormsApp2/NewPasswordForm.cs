@@ -42,7 +42,9 @@ namespace WinFormsApp2
         }
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
-        private async void sendCodeBTN_Click(object sender, EventArgs e)
+        public Action<string> MessageBoxShow { get; set; } = (text) => MessageBox.Show(text);
+
+        public async void sendCodeBTN_Click(object sender, EventArgs e)
         {
             var userEmail = textBox1.Text.Trim();
             UserEmail = userEmail;
@@ -52,14 +54,14 @@ namespace WinFormsApp2
             if (!IsValidEmail(UserEmail))
             {
                 Logger.Error("Ошибка: Неверный формат email");
-                MessageBox.Show("Введите корректный email");
+                MessageBoxShow("Введите корректный email");
                 return;
             }
 
             if (!UserExists(UserEmail))
             {
                 Logger.Error($"Ошибка: пользователь не найден");
-                MessageBox.Show($"Пользователь {UserEmail} не найден");
+                MessageBoxShow($"Пользователь {UserEmail} не найден");
                 return;
             }
 
@@ -69,7 +71,7 @@ namespace WinFormsApp2
             {
                 await SendEmailViaYandexSMTP(UserEmail, SentCode);
                 Logger.Info($"Код отправлен на {UserEmail}");
-                MessageBox.Show($"Код подтверждения отправлен на {UserEmail}");
+                MessageBoxShow($"Код подтверждения отправлен на {UserEmail}");
 
                 textBox2.Enabled = true;
                 textBox3.Enabled = true;
@@ -80,7 +82,7 @@ namespace WinFormsApp2
             catch (Exception ex)
             {
                 Logger.Error("Ошибка отправки email", ex);
-                MessageBox.Show($"Ошибка: {ex.Message}");
+                MessageBoxShow($"Ошибка: {ex.Message}");
             }
         }
 
@@ -133,7 +135,7 @@ namespace WinFormsApp2
             if (textBox2.Text != SentCode)
             {
                 Logger.Error("Неверный код");
-                MessageBox.Show("Неверный код");
+                MessageBoxShow("Неверный код");
                 textBox2.Focus();
                 return;
             }
@@ -141,7 +143,7 @@ namespace WinFormsApp2
             if (textBox3.Text != textBox4.Text)
             {
                 Logger.Error("Пароли не совпадают");
-                MessageBox.Show("Пароли не совпадают");
+                MessageBoxShow("Пароли не совпадают");
                 textBox3.Focus();
                 return;
             }
@@ -149,7 +151,7 @@ namespace WinFormsApp2
             if (!IsPasswordValid(textBox3.Text))
             {
                 Logger.Error("Некорректный формат пароля");
-                MessageBox.Show("Пароль должен содержать минимум 6 символов, включая буквы");
+                MessageBoxShow("Пароль должен содержать минимум 6 символов, включая буквы");
                 textBox3.Focus();
                 return;
             }
@@ -160,19 +162,19 @@ namespace WinFormsApp2
                 if (success)
                 {
                     Logger.Error("Пароль изменён");
-                    MessageBox.Show("Пароль изменён");
+                    MessageBoxShow("Пароль изменён");
                     this.Close();
                 }
                 else
                 {
                     Logger.Error("Не удалось изменить пароль");
-                    MessageBox.Show("Не удалось изменить пароль");
+                    MessageBoxShow("Не удалось изменить пароль");
                 }
             }
             catch (Exception ex)
             {
                 Logger.Error("Ошибка:", ex);
-                MessageBox.Show($"Ошибка: {ex.Message}");
+                MessageBoxShow($"Ошибка: {ex.Message}");
             }
         }
 
@@ -243,6 +245,11 @@ namespace WinFormsApp2
 
             Logger.Info($"Проверка пароля: {(isValid ? "соответствует требованиям" : "не соответствует")}");
             return isValid;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

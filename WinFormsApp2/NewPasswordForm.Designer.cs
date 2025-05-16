@@ -103,6 +103,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 7;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -204,13 +205,13 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button sendCodeBTN;
         private Label label5;
-        private TextBox textBox3;
-        private Button verificationBTN;
         private Label repeatPassword;
-        private TextBox textBox4;
+        public TextBox textBox1;
+        public TextBox textBox2;
+        public Button sendCodeBTN;
+        public TextBox textBox3;
+        public Button verificationBTN;
+        public TextBox textBox4;
     }
 }
