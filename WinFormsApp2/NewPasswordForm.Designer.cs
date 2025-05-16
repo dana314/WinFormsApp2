@@ -46,15 +46,18 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImage = Properties.Resources.Авторизация;
             pictureBox1.Location = new Point(189, 190);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(423, 293);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Window;
             label1.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -66,6 +69,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.BackColor = SystemColors.Window;
             label2.Font = new Font("Impact", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -77,6 +81,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.BackColor = SystemColors.Window;
             label3.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -88,6 +93,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Window;
             label4.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -99,6 +105,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(407, 242);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
@@ -106,6 +113,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(407, 309);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(125, 27);
@@ -113,6 +121,7 @@
             // 
             // sendCodeBTN
             // 
+            sendCodeBTN.Anchor = AnchorStyles.None;
             sendCodeBTN.FlatStyle = FlatStyle.Popup;
             sendCodeBTN.Font = new Font("Impact", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
             sendCodeBTN.Location = new Point(338, 275);
@@ -125,6 +134,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.BackColor = SystemColors.Window;
             label5.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -136,6 +146,7 @@
             // 
             // textBox3
             // 
+            textBox3.Anchor = AnchorStyles.None;
             textBox3.Location = new Point(407, 345);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(125, 27);
@@ -143,6 +154,7 @@
             // 
             // verificationBTN
             // 
+            verificationBTN.Anchor = AnchorStyles.None;
             verificationBTN.FlatStyle = FlatStyle.Popup;
             verificationBTN.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             verificationBTN.Location = new Point(338, 416);
@@ -155,6 +167,7 @@
             // 
             // repeatPassword
             // 
+            repeatPassword.Anchor = AnchorStyles.None;
             repeatPassword.AutoSize = true;
             repeatPassword.BackColor = SystemColors.Window;
             repeatPassword.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -166,6 +179,7 @@
             // 
             // textBox4
             // 
+            textBox4.Anchor = AnchorStyles.None;
             textBox4.Location = new Point(407, 380);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(125, 27);
@@ -175,6 +189,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackgroundImage = Properties.Resources.Фон_регистрация;
             ClientSize = new Size(800, 672);
             Controls.Add(textBox4);

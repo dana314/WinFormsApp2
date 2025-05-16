@@ -44,6 +44,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(comboBox4);
             panel1.Controls.Add(comboBox3);
             panel1.Controls.Add(comboBox2);
@@ -60,6 +61,7 @@
             // 
             // comboBox4
             // 
+            comboBox4.Anchor = AnchorStyles.Top;
             comboBox4.FormattingEnabled = true;
             comboBox4.Location = new Point(293, 197);
             comboBox4.Name = "comboBox4";
@@ -68,6 +70,7 @@
             // 
             // comboBox3
             // 
+            comboBox3.Anchor = AnchorStyles.Top;
             comboBox3.FormattingEnabled = true;
             comboBox3.Location = new Point(293, 149);
             comboBox3.Name = "comboBox3";
@@ -76,6 +79,7 @@
             // 
             // comboBox2
             // 
+            comboBox2.Anchor = AnchorStyles.Top;
             comboBox2.FormattingEnabled = true;
             comboBox2.Location = new Point(293, 98);
             comboBox2.Name = "comboBox2";
@@ -84,6 +88,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.Anchor = AnchorStyles.Top;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(293, 48);
             comboBox1.Name = "comboBox1";
@@ -92,6 +97,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
             button1.Location = new Point(143, 300);
@@ -104,6 +110,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label2.AutoSize = true;
             label2.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label2.Location = new Point(211, 46);
@@ -114,6 +121,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label3.AutoSize = true;
             label3.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label3.Location = new Point(196, 96);
@@ -124,6 +132,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label4.AutoSize = true;
             label4.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label4.Location = new Point(143, 147);
@@ -134,6 +143,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label5.AutoSize = true;
             label5.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label5.Location = new Point(41, 200);
@@ -144,6 +154,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Popup;
             label1.Font = new Font("Impact", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -157,6 +168,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackgroundImage = Properties.Resources.Фон_авторизация;
             ClientSize = new Size(847, 748);
             Controls.Add(label1);

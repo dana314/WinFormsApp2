@@ -161,6 +161,7 @@
             // 
             // labelA5
             // 
+            labelA5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelA5.AutoSize = true;
             labelA5.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelA5.Location = new Point(567, 489);
@@ -171,6 +172,7 @@
             // 
             // labelG5
             // 
+            labelG5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelG5.AutoSize = true;
             labelG5.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelG5.Location = new Point(485, 489);
@@ -181,6 +183,7 @@
             // 
             // labelC5
             // 
+            labelC5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelC5.AutoSize = true;
             labelC5.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelC5.Location = new Point(567, 469);
@@ -191,6 +194,7 @@
             // 
             // labelY5
             // 
+            labelY5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelY5.AutoSize = true;
             labelY5.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelY5.Location = new Point(512, 469);
@@ -201,6 +205,7 @@
             // 
             // labelT5
             // 
+            labelT5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelT5.AutoSize = true;
             labelT5.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelT5.Location = new Point(532, 293);
@@ -211,6 +216,7 @@
             // 
             // labelA4
             // 
+            labelA4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelA4.AutoSize = true;
             labelA4.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelA4.Location = new Point(133, 490);
@@ -221,6 +227,7 @@
             // 
             // labelG4
             // 
+            labelG4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelG4.AutoSize = true;
             labelG4.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelG4.Location = new Point(53, 490);
@@ -231,6 +238,7 @@
             // 
             // labelC4
             // 
+            labelC4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelC4.AutoSize = true;
             labelC4.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelC4.Location = new Point(100, 467);
@@ -241,6 +249,7 @@
             // 
             // labelY4
             // 
+            labelY4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelY4.AutoSize = true;
             labelY4.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelY4.Location = new Point(53, 468);
@@ -251,6 +260,7 @@
             // 
             // labelT4
             // 
+            labelT4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelT4.AutoSize = true;
             labelT4.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelT4.Location = new Point(71, 293);
@@ -261,6 +271,7 @@
             // 
             // labelAge2
             // 
+            labelAge2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelAge2.AutoSize = true;
             labelAge2.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelAge2.Location = new Point(561, 209);
@@ -271,6 +282,7 @@
             // 
             // labelGenre2
             // 
+            labelGenre2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelGenre2.AutoSize = true;
             labelGenre2.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelGenre2.Location = new Point(488, 209);
@@ -281,6 +293,7 @@
             // 
             // labelCountry2
             // 
+            labelCountry2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelCountry2.AutoSize = true;
             labelCountry2.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelCountry2.Location = new Point(548, 190);
@@ -291,6 +304,7 @@
             // 
             // labelYear2
             // 
+            labelYear2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelYear2.AutoSize = true;
             labelYear2.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelYear2.Location = new Point(503, 190);
@@ -301,6 +315,7 @@
             // 
             // labelTitle2
             // 
+            labelTitle2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelTitle2.AutoSize = true;
             labelTitle2.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelTitle2.Location = new Point(438, 16);
@@ -311,6 +326,7 @@
             // 
             // labelAge3
             // 
+            labelAge3.Anchor = AnchorStyles.Bottom;
             labelAge3.AutoSize = true;
             labelAge3.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelAge3.Location = new Point(350, 350);
@@ -321,6 +337,7 @@
             // 
             // labelGenre3
             // 
+            labelGenre3.Anchor = AnchorStyles.Bottom;
             labelGenre3.AutoSize = true;
             labelGenre3.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelGenre3.Location = new Point(253, 351);
@@ -331,6 +348,7 @@
             // 
             // labelCountry3
             // 
+            labelCountry3.Anchor = AnchorStyles.Bottom;
             labelCountry3.AutoSize = true;
             labelCountry3.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelCountry3.Location = new Point(347, 330);
@@ -341,6 +359,7 @@
             // 
             // labelYear3
             // 
+            labelYear3.Anchor = AnchorStyles.Bottom;
             labelYear3.AutoSize = true;
             labelYear3.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelYear3.Location = new Point(300, 331);
@@ -351,6 +370,7 @@
             // 
             // labelTitle3
             // 
+            labelTitle3.Anchor = AnchorStyles.Top;
             labelTitle3.AutoSize = true;
             labelTitle3.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelTitle3.Location = new Point(312, 156);
@@ -361,6 +381,7 @@
             // 
             // label35
             // 
+            label35.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label35.AutoSize = true;
             label35.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label35.Location = new Point(127, 212);
@@ -371,6 +392,7 @@
             // 
             // label36
             // 
+            label36.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label36.AutoSize = true;
             label36.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label36.Location = new Point(53, 212);
@@ -381,6 +403,7 @@
             // 
             // label34
             // 
+            label34.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label34.AutoSize = true;
             label34.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label34.Location = new Point(122, 193);
@@ -391,6 +414,7 @@
             // 
             // label33
             // 
+            label33.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label33.AutoSize = true;
             label33.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label33.Location = new Point(82, 193);
@@ -401,6 +425,7 @@
             // 
             // label32
             // 
+            label32.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label32.AutoSize = true;
             label32.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label32.Location = new Point(62, 16);
@@ -422,6 +447,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.BorderStyle = BorderStyle.FixedSingle;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(465, 16);
@@ -433,6 +459,7 @@
             // 
             // pictureBox5
             // 
+            pictureBox5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pictureBox5.BorderStyle = BorderStyle.FixedSingle;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(465, 294);
@@ -444,6 +471,7 @@
             // 
             // pictureBox4
             // 
+            pictureBox4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox4.BorderStyle = BorderStyle.FixedSingle;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(31, 294);
@@ -455,6 +483,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             pictureBox3.BorderStyle = BorderStyle.FixedSingle;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(248, 156);
@@ -479,6 +508,7 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.Right;
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Impact", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
             button2.Location = new Point(758, 310);
@@ -529,6 +559,7 @@
             // 
             // labelG10
             // 
+            labelG10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelG10.AutoSize = true;
             labelG10.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelG10.Location = new Point(500, 485);
@@ -539,6 +570,7 @@
             // 
             // labelA10
             // 
+            labelA10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelA10.AutoSize = true;
             labelA10.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelA10.Location = new Point(559, 485);
@@ -549,6 +581,7 @@
             // 
             // labelY10
             // 
+            labelY10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelY10.AutoSize = true;
             labelY10.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelY10.Location = new Point(512, 466);
@@ -559,6 +592,7 @@
             // 
             // labelC10
             // 
+            labelC10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelC10.AutoSize = true;
             labelC10.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelC10.Location = new Point(559, 465);
@@ -569,6 +603,7 @@
             // 
             // labelT10
             // 
+            labelT10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             labelT10.AutoSize = true;
             labelT10.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelT10.Location = new Point(503, 291);
@@ -579,6 +614,7 @@
             // 
             // labelT9
             // 
+            labelT9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelT9.AutoSize = true;
             labelT9.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelT9.Location = new Point(96, 292);
@@ -589,6 +625,7 @@
             // 
             // labelG9
             // 
+            labelG9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelG9.AutoSize = true;
             labelG9.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelG9.Location = new Point(82, 484);
@@ -599,6 +636,7 @@
             // 
             // labelA9
             // 
+            labelA9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelA9.AutoSize = true;
             labelA9.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelA9.Location = new Point(141, 484);
@@ -609,6 +647,7 @@
             // 
             // labelY9
             // 
+            labelY9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelY9.AutoSize = true;
             labelY9.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelY9.Location = new Point(94, 465);
@@ -619,6 +658,7 @@
             // 
             // labelC9
             // 
+            labelC9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelC9.AutoSize = true;
             labelC9.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelC9.Location = new Point(141, 465);
@@ -629,6 +669,7 @@
             // 
             // labelA6
             // 
+            labelA6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelA6.AutoSize = true;
             labelA6.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelA6.Location = new Point(567, 207);
@@ -639,6 +680,7 @@
             // 
             // labelG6
             // 
+            labelG6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelG6.AutoSize = true;
             labelG6.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelG6.Location = new Point(488, 207);
@@ -649,6 +691,7 @@
             // 
             // labelC6
             // 
+            labelC6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelC6.AutoSize = true;
             labelC6.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelC6.Location = new Point(559, 188);
@@ -659,6 +702,7 @@
             // 
             // labelY6
             // 
+            labelY6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelY6.AutoSize = true;
             labelY6.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelY6.Location = new Point(512, 187);
@@ -669,6 +713,7 @@
             // 
             // labelT6
             // 
+            labelT6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             labelT6.AutoSize = true;
             labelT6.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelT6.Location = new Point(526, 13);
@@ -679,6 +724,7 @@
             // 
             // labelG8
             // 
+            labelG8.Anchor = AnchorStyles.Bottom;
             labelG8.AutoSize = true;
             labelG8.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelG8.Location = new Point(276, 346);
@@ -689,6 +735,7 @@
             // 
             // labelA8
             // 
+            labelA8.Anchor = AnchorStyles.Bottom;
             labelA8.AutoSize = true;
             labelA8.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelA8.Location = new Point(361, 346);
@@ -699,6 +746,7 @@
             // 
             // labelC8
             // 
+            labelC8.Anchor = AnchorStyles.Bottom;
             labelC8.AutoSize = true;
             labelC8.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelC8.Location = new Point(350, 327);
@@ -709,6 +757,7 @@
             // 
             // labelY8
             // 
+            labelY8.Anchor = AnchorStyles.Bottom;
             labelY8.AutoSize = true;
             labelY8.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelY8.Location = new Point(305, 327);
@@ -719,6 +768,7 @@
             // 
             // labelT8
             // 
+            labelT8.Anchor = AnchorStyles.Top;
             labelT8.AutoSize = true;
             labelT8.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 204);
             labelT8.Location = new Point(325, 153);
@@ -779,6 +829,7 @@
             // 
             // button4
             // 
+            button4.Anchor = AnchorStyles.Bottom;
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Impact", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
             button4.Location = new Point(294, 498);
@@ -791,6 +842,7 @@
             // 
             // pictureBox10
             // 
+            pictureBox10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
             pictureBox10.Location = new Point(465, 294);
             pictureBox10.Name = "pictureBox10";
@@ -801,6 +853,7 @@
             // 
             // pictureBox9
             // 
+            pictureBox9.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
             pictureBox9.Location = new Point(54, 294);
             pictureBox9.Name = "pictureBox9";
@@ -811,6 +864,7 @@
             // 
             // pictureBox8
             // 
+            pictureBox8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
             pictureBox8.Location = new Point(261, 156);
             pictureBox8.Name = "pictureBox8";
@@ -831,6 +885,7 @@
             // 
             // pictureBox6
             // 
+            pictureBox6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new Point(465, 16);
             pictureBox6.Name = "pictureBox6";

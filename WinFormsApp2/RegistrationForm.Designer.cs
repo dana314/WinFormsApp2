@@ -47,6 +47,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BackgroundImage = Properties.Resources.Авторизация;
             pictureBox1.Location = new Point(189, 182);
             pictureBox1.Name = "pictureBox1";
@@ -56,6 +57,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Window;
             label1.FlatStyle = FlatStyle.Popup;
@@ -68,6 +70,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.BackColor = SystemColors.Window;
             label2.Font = new Font("Impact", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -79,6 +82,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.BackColor = SystemColors.Window;
             label3.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -90,6 +94,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Window;
             label4.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -101,6 +106,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.BackColor = SystemColors.Window;
             label5.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -112,6 +118,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.BackColor = SystemColors.Window;
             label6.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
@@ -123,6 +130,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             button1.Location = new Point(320, 379);
@@ -135,6 +143,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(388, 214);
             textBox1.MaxLength = 15;
             textBox1.Name = "textBox1";
@@ -143,6 +152,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(388, 247);
             textBox2.MaxLength = 100;
             textBox2.Name = "textBox2";
@@ -151,6 +161,7 @@
             // 
             // textBox3
             // 
+            textBox3.Anchor = AnchorStyles.None;
             textBox3.Location = new Point(388, 280);
             textBox3.MaxLength = 12;
             textBox3.Name = "textBox3";
@@ -159,6 +170,7 @@
             // 
             // textBox4
             // 
+            textBox4.Anchor = AnchorStyles.None;
             textBox4.Location = new Point(388, 313);
             textBox4.MaxLength = 10;
             textBox4.Name = "textBox4";
@@ -167,6 +179,7 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Anchor = AnchorStyles.None;
             dateTimePicker1.CustomFormat = "dd.MM.yyyy";
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.Location = new Point(388, 346);
@@ -177,6 +190,7 @@
             // 
             // cancelBTN
             // 
+            cancelBTN.Anchor = AnchorStyles.None;
             cancelBTN.FlatStyle = FlatStyle.Popup;
             cancelBTN.Font = new Font("Impact", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             cancelBTN.Location = new Point(372, 414);
