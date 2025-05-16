@@ -78,5 +78,10 @@ namespace WinFormsApp2
             var newPasswordForm = new NewPasswordForm();
             newPasswordForm.ShowDialog();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
