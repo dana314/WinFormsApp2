@@ -140,6 +140,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(155, 27);
             textBox1.TabIndex = 9;
+            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // textBox2
             // 
@@ -224,11 +225,11 @@
         private Label label5;
         private Label label6;
         private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private DateTimePicker dateTimePicker1;
         private Button cancelBTN;
+        public TextBox textBox1;
+        public TextBox textBox2;
+        public TextBox textBox3;
+        public TextBox textBox4;
+        public DateTimePicker dateTimePicker1;
     }
 }
